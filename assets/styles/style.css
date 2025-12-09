@@ -32,6 +32,16 @@ main {
   padding: 25px;
 }
 
+/* FOOTER */
+footer {
+  background: rgb(21, 78, 236);
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  color: white;
+}
+
 
 
 
