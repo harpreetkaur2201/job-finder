@@ -4,55 +4,96 @@
 
 body {
     font-family: "Encode Sans", "Nunito Sans", "Roboto", sans-serif;
-    background: linear-gradient(135deg, #f0f2f5, #e6e9ef);
+    background-color: #f0f2f5;
     min-height: 100vh;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; /*  small screens */
 }
 
 
-.login-wrapper {
+.login-container {
+    width: 90%;
+    max-width: 1400px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.12);
+
+    padding: 40px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    min-height: 75vh; 
+}
+
+
+.left-section {
+    flex: 1; /* image takes half width */
+}
+
+.login-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.right-section {
+    flex: 1;
+}
+
+
+.welcome-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+    position: relative;
+}
+
+
+.welcome-title::after {
+    content: " Job Finder";
+    color: #4f7cff;
+    font-weight: 800;
+}
+
+.welcome-subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
     max-width: 420px;
 }
 
-
-.login-box {
-    background-color: #fff;
-    padding: 35px 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
-
-
-.app-title {
-    font-size: 26px;
-    text-align: center;
-    margin-bottom: 25px;
-    font-weight: 600;
-    color: #222;
+.underline {
+    width: 60px;
+    height: 3px;
+    background-color: #4f7cff;
+    border-radius: 2px;
+    margin: 15px 0 25px 0;
 }
 
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     display: flex;
     flex-direction: column;
 }
 
 label {
     font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 6px;
-    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
 }
 
 input {
     padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #c9c9c9;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
     font-size: 14px;
     outline: none;
     transition: 0.2s ease;
@@ -60,7 +101,25 @@ input {
 
 input:focus {
     border-color: #4f7cff;
-    box-shadow: 0 0 3px rgba(79,124,255,0.4);
+    box-shadow: 0 0 3px rgba(79, 124, 255, 0.3);
+}
+
+
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.remember {
+    font-size: 14px;
+    color: #333;
+}
+
+.forgot {
+    font-size: 14px;
+    color: #4f7cff;
+    text-decoration: none;
 }
 
 
@@ -69,17 +128,62 @@ input:focus {
     padding: 12px;
     background-color: #4f7cff;
     color: #fff;
+    font-weight: 600;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.2s ease;
+    margin-bottom: 10px;
 }
 
-.login-btn:hover {
-    background-color: #3d63db;
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    color: #4f7cff;
+    font-weight: 600;
+    border: 1px solid #4f7cff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.or-login {
+    text-align: center;
+    font-size: 14px;
+    margin: 18px 0;
+}
+
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.social-login a {
+    width: 32%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.social-login a:nth-child(1) {
+    background-color: #1877F2;
+}
+
+.social-login a:nth-child(2) {
+    background-color: #0077B5;
+}
+
+
+.social-login a:nth-child(3) {
+    background-color: #1877F2;
 }
 
 
@@ -91,47 +195,25 @@ input:focus {
 }
 
 
-@media (max-width: 480px) {
-
-    .login-box {
-        padding: 25px 20px;
+@media (max-width: 992px) {
+    .login-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
     }
 
-    .app-title {
-        font-size: 22px;
-    }
-
-    input {
-        font-size: 13px;
-        padding: 10px;
-    }
-
-    .login-btn {
-        font-size: 14px;
-        padding: 10px;
+    .left-section,
+    .right-section {
+        width: 100%;
     }
 }
 
-
-@media (max-width: 768px) {
-
-    .login-wrapper {
-        max-width: 380px;
+@media (max-width: 600px) {
+    .welcome-title {
+        font-size: 26px;
     }
 
-    .login-box {
-        padding: 30px 25px;
-    }
-
-    .app-title {
-        font-size: 24px;
-    }
-}
-
-
-@media (min-width: 1400px) {
-
-    .login-box {
-        transform: scale(1.05);
+    .login-container {
+        padding: 20px;
     }
 }
