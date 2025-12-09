@@ -124,5 +124,10 @@ footer {
   margin-bottom: 15px;
 }
 
-
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
 
