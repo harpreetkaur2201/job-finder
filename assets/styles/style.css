@@ -111,5 +111,18 @@ footer {
   font-size: 0.9rem;
 }
 
+/* RIGHT COLUMN */
+.right-col {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.right-col h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
 
 
