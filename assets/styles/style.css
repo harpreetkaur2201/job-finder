@@ -67,7 +67,49 @@ footer {
   color: #555;
 }
 
+/* CENTER COLUMN */
+.center-col {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
 
+.center-col h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+/* USER LIST CARDS */
+#usersList .user-card,
+#peopleList .user-card {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.user-card img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.user-info p {
+  margin: 3px 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
 
 
 
