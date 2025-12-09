@@ -12,4 +12,17 @@ body {
   padding: 0;
 }
 
+/* HEADER */
+header {
+  background: rgb(21, 78, 236);
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  border-bottom: 1px solid #ddd;
+  color: white;
+}
+
+
+
 
