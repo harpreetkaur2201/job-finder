@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Daljit Kaur">
+    <meta name="author" content="Harpreet Kaur,Harman,Daljit Kaur">
     <meta name="description" content="Job Finder - Login Page">
 
     
@@ -13,6 +13,36 @@
 
     
     <link rel="stylesheet" href="./assets/styles/index.css" media="all">
+      <script src="assets/scripts/login.js"></script>
 
     <title>Job Finder | Login</title>
 </head>
+<body>
+
+    <main class="login-wrapper">
+
+        <section class="login-box">
+
+            <h1 class="app-title">Job Finder</h1>
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+
+            <button id="loginBtn" class="login-btn">Login</button>
+
+            <p id="errorMessage" class="error-message"></p>
+
+        </section>
+
+    </main>
+
+   
+</body>
+</html>
