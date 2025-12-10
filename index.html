@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Harpreet Kaur">
-    <meta name="description" content="Storage">
+    <meta name="description" content="">
     <meta name="keywords" content="html, css, web, web development, javascript">
     <link rel="icon" href="./assets/media/favicon.png?v=2" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,5 +17,30 @@
     <title>Job Recruite</title>
   </head>
   <body>
+     <div class="login-container">
+      <header>
+        <h1>Job Finder</h1>
+      </header>
+
+      <main class="login-main">
+        <form id="loginForm">
+          <h2>Login</h2>
+
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+          <button type="submit">Login</button>
+
+          <p id="errorMsg" style="color:red; display:none;">Incorrect username or password</p>
+        </form>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Job Finder</p>
+      </footer>
+    </div>
   </body>
 </html>
