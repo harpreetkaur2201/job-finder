@@ -2,11 +2,6 @@
 @import "./reset.css";
 
 
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
-
 body {
     font-family: "Encode Sans", "Nunito Sans", "Roboto", sans-serif;
     background-color: #f0f2f5;
@@ -17,9 +12,10 @@ body {
 }
 
 
+
 .login-container {
     width: 100%;
-    max-width: 1800px;
+    max-width: 1900px;
     background: #ffffff;
     border-radius: 14px;
     box-shadow: 0px 8px 25px rgba(0,0,0,0.12);
@@ -30,8 +26,10 @@ body {
     align-items: center;
     gap: 50px;
 
-    height: 85vh;        
+    height: 95vh;        
 }
+
+
 
 .left-section {
     flex: 1;
@@ -42,10 +40,11 @@ body {
 .login-image {
     width: 100%;
     height: 100%;
-    max-height: 500px;     
+    max-height: 500px;
     object-fit: cover;
     border-radius: 12px;
 }
+
 
 
 .right-section {
@@ -57,6 +56,7 @@ body {
 }
 
 
+
 .welcome-title {
     font-size: 32px;
     font-weight: 700;
@@ -65,10 +65,12 @@ body {
 }
 
 
-.welcome-title span {
+.welcome-title::after {
+    content: " Job Finder";
     color: #4f7cff;
     font-weight: 800;
 }
+
 
 .welcome-subtitle {
     font-size: 14px;
@@ -81,6 +83,8 @@ body {
     font-size: 14px;
 }
 
+
+
 .underline {
     width: 60px;
     height: 3px;
@@ -88,6 +92,7 @@ body {
     border-radius: 2px;
     margin: 15px 0 25px 0;
 }
+
 
 
 .input-group {
@@ -117,6 +122,7 @@ input:focus {
 }
 
 
+
 .options-row {
     display: flex;
     justify-content: space-between;
@@ -128,6 +134,7 @@ input:focus {
     font-size: 14px;
     text-decoration: none;
 }
+
 
 
 .login-btn {
@@ -142,6 +149,8 @@ input:focus {
     margin: 10px 0;
 }
 
+
+
 .signup-btn {
     width: 100%;
     padding: 12px;
@@ -154,11 +163,13 @@ input:focus {
 }
 
 
+
 .or-login {
     text-align: center;
     font-size: 14px;
     margin: 15px 0 10px 0;
 }
+
 
 
 .social-login {
@@ -182,6 +193,8 @@ input:focus {
 .social-login .ln { background-color: #0077B5; }
 .social-login .gg { background-color: #1877F2; }
 
+
+
 .error-message {
     text-align: center;
     color: red;
@@ -189,11 +202,12 @@ input:focus {
 }
 
 
+
 @media (max-width: 992px) {
     .login-container {
         flex-direction: column;
         height: auto;
-        overflow: auto; 
+        overflow: auto;
         padding: 30px;
     }
 
@@ -201,7 +215,8 @@ input:focus {
         overflow: auto;
     }
 
-    .left-section, .right-section {
+    .left-section, 
+    .right-section {
         width: 100%;
         height: auto;
     }
@@ -210,6 +225,8 @@ input:focus {
         height: 300px;
     }
 }
+
+
 
 .shake {
     animation: shake 0.3s ease;
@@ -222,4 +239,3 @@ input:focus {
     75% { transform: translateX(-4px); }
     100% { transform: translateX(0); }
 }
-
