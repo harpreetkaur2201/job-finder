@@ -2,10 +2,14 @@
 @import "./reset.css";
 
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     font-family: "Encode Sans", "Nunito Sans", "Roboto", sans-serif;
     background-color: #f0f2f5;
-    min-height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -14,29 +18,31 @@ body {
 
 
 .login-container {
-    width: 90%;
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1800px;
     background: #ffffff;
     border-radius: 14px;
     box-shadow: 0px 8px 25px rgba(0,0,0,0.12);
 
-    padding: 40px 50px;
+    padding: 40px 60px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    align-items: center;
+    gap: 50px;
 
-    min-height: 75vh; 
+    height: 85vh;        
 }
 
-
 .left-section {
-    flex: 1; /* image takes half width */
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .login-image {
     width: 100%;
     height: 100%;
+    max-height: 500px;     
     object-fit: cover;
     border-radius: 12px;
 }
@@ -44,6 +50,10 @@ body {
 
 .right-section {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 
@@ -52,12 +62,10 @@ body {
     font-weight: 700;
     margin-bottom: 10px;
     color: #000;
-    position: relative;
 }
 
 
-.welcome-title::after {
-    content: " Job Finder";
+.welcome-title span {
     color: #4f7cff;
     font-weight: 800;
 }
@@ -66,7 +74,11 @@ body {
     font-size: 14px;
     color: #555;
     margin-bottom: 5px;
-    max-width: 420px;
+}
+
+.small-text {
+    color: #666;
+    font-size: 14px;
 }
 
 .underline {
@@ -86,8 +98,8 @@ body {
 
 label {
     font-size: 14px;
-    margin-bottom: 5px;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
 input {
@@ -101,7 +113,7 @@ input {
 
 input:focus {
     border-color: #4f7cff;
-    box-shadow: 0 0 3px rgba(79, 124, 255, 0.3);
+    box-shadow: 0 0 3px rgba(79,124,255,0.3);
 }
 
 
@@ -111,14 +123,9 @@ input:focus {
     margin-bottom: 15px;
 }
 
-.remember {
-    font-size: 14px;
-    color: #333;
-}
-
 .forgot {
-    font-size: 14px;
     color: #4f7cff;
+    font-size: 14px;
     text-decoration: none;
 }
 
@@ -132,8 +139,7 @@ input:focus {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .signup-btn {
@@ -151,7 +157,7 @@ input:focus {
 .or-login {
     text-align: center;
     font-size: 14px;
-    margin: 18px 0;
+    margin: 15px 0 10px 0;
 }
 
 
@@ -163,57 +169,44 @@ input:focus {
 
 .social-login a {
     width: 32%;
-    text-align: center;
     padding: 10px;
     border-radius: 6px;
-    text-decoration: none;
+    color: #fff;
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
+    text-align: center;
+    text-decoration: none;
 }
 
-
-.social-login a:nth-child(1) {
-    background-color: #1877F2;
-}
-
-.social-login a:nth-child(2) {
-    background-color: #0077B5;
-}
-
-
-.social-login a:nth-child(3) {
-    background-color: #1877F2;
-}
-
+.social-login .fb { background-color: #1877F2; }
+.social-login .ln { background-color: #0077B5; }
+.social-login .gg { background-color: #1877F2; }
 
 .error-message {
-    margin-top: 12px;
-    color: red;
-    font-size: 14px;
     text-align: center;
+    color: red;
+    margin-top: 10px;
 }
 
 
 @media (max-width: 992px) {
     .login-container {
         flex-direction: column;
-        text-align: center;
+        height: auto;
+        overflow: auto; 
         padding: 30px;
     }
 
-    .left-section,
-    .right-section {
+    body {
+        overflow: auto;
+    }
+
+    .left-section, .right-section {
         width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .welcome-title {
-        font-size: 26px;
+        height: auto;
     }
 
-    .login-container {
-        padding: 20px;
+    .login-image {
+        height: 300px;
     }
 }
