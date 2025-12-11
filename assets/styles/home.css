@@ -1,0 +1,292 @@
+@charset "UTF-8";
+@import "./reset.css";
+
+
+body {
+    font-family: "Encode Sans", "Nunito Sans", "Roboto", sans-serif;
+    background-color: #0c2b5b;
+    margin: 0;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 25px;
+    padding: 120px 40px 40px;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #4f7cff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.profile-icon img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.15);
+}
+
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.user-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.user-role, 
+.user-location {
+    font-size: 14px;
+    color: #444;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin: 18px 0;
+}
+
+.detail-number {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: gray;
+}
+
+.premium-btn {
+    width: 80%;
+    margin: 10px auto 0;
+    padding: 10px 14px;
+    background-color: #fff;
+    border: 1.5px solid #4f7cff;
+    border-radius: 8px;
+    color: #4f7cff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.premium-btn:hover {
+    background-color: #4f7cff;
+    color: white;
+}
+
+
+.post-box textarea {
+    width: 100%;
+    height: 85px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    resize: none;
+    font-size: 14px;
+}
+
+.post-options {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.post-options button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: #333;
+}
+
+.post-btn {
+    background-color: #4f7cff;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.post-btn:hover {
+    background-color: #3f66d8;
+}
+
+.post-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.post-user {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-username {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.post-time {
+    font-size: 12px;
+    color: gray;
+}
+
+.post-text {
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.post-actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #444;
+    align-items: center;
+}
+
+.post-actions span {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.post-actions i {
+    font-size: 16px;
+}
+
+
+.suggest-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.footer {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding: 18px 0;
+    background-color: #0c2b5b;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 992px) {
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 140px 20px 30px;
+        gap: 20px;
+    }
+
+    .left-column,
+    .center-column,
+    .right-column {
+        width: 100%;
+    }
+
+    .right-column {
+        display: none; /* hide suggestions like LinkedIn mobile */
+    }
+
+    textarea {
+        height: 70px;
+    }
+
+    .post-image {
+        height: auto;
+    }
+}
