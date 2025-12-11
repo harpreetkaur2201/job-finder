@@ -1,50 +1,101 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Harpreet Kaur">
-    <meta name="description" content="">
-    <meta name="keywords" content="html, css, web, web development, javascript">
-    <link rel="icon" href="./assets/media/favicon.png?v=2" type="image/x-icon">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Harpreet Kaur, Harman, Daljit Kaur">
+    <meta name="description" content="Job Finder - Home Page">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/styles/index.css" media="all">
-    <script src="./assets/scripts/login.js"></script>
-    <title>About us</title>
-  </head>
-  <body>
-   <header>
-    <h1>Job Finder</h1>
-  </header>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
 
-  <main class="grid-container">
-    <!-- Left column: Main user profile -->
-    <aside class="left-col">
-      <img src="images/myProfile.jpg" alt="Profile Picture">
-      <h3>Harpreet Kaur</h3>
-      <p>Winnipeg, Canada</p>
-    </aside>
+    <link rel="stylesheet" href="./assets/styles/home.css" media="all">
+    <script src="./assets/scripts/home.js" defer></script>
 
-    <!-- Center column: Connections -->
-    <section class="center-col" id="connections">
-      <h2>Connections</h2>
-      <div id="usersList"></div>
-    </section>
+    <title>Job Finder | Home</title>
+</head>
 
-    <!-- Right column: People you may know -->
-    <aside class="right-col">
-      <h2>People You May Know</h2>
-      <div id="peopleList"></div>
-    </aside>
-  </main>
+<body>
 
-  <footer>
-    <p>&copy; 2025 Job Finder</p>
-  </footer>
+   
+    <header class="top-nav">
 
-  </body>
+        <div class="logo-area">
+            <img src="./assets/media/pic.png" alt="logo" class="logo-icon">
+            <h2>Job Finder</h2>
+        </div>
+
+        <div class="search-area">
+            <input type="text" placeholder="Search for jobs or people...">
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Network</a>
+            <a href="#">Messages</a>
+            <a href="#">Notifications</a>
+            <a href="#">Jobs</a>
+        </div>
+
+        <div class="user-icon"></div>
+    </header>
+
+
+  
+    <main class="main-container">
+
+        
+        <aside class="left-column white-box">
+
+            <div class="profile-card">
+                <img src="./assets/media/pic.png" class="profile-photo" alt="Profile Photo">
+
+                <h3 class="profile-name">Harman Singh</h3>
+                <p class="profile-title">Web Developer & Student</p>
+                <p class="profile-location">Winnipeg, Canada</p>
+
+                <hr>
+
+                <div class="profile-stats">
+                    <p><strong id="myConnections">0</strong> Connections</p>
+                    <p><strong id="myViews">0</strong> Profile Views</p>
+                </div>
+            </div>
+
+        </aside>
+
+
+       
+        <section class="middle-column">
+
+            
+            <div class="white-box create-post">
+                <textarea id="postText" placeholder="Write a post..."></textarea>
+
+                <button id="postBtn">Post</button>
+            </div>
+
+            
+            <div id="postFeed" class="post-feed white-box">
+               
+            </div>
+
+        </section>
+
+
+        <aside class="right-column white-box">
+
+            <h3>People You May Know</h3>
+
+            
+            <div id="peopleContainer" class="people-list">
+                
+            </div>
+
+        </aside>
+
+    </main>
+
+</body>
 </html>
