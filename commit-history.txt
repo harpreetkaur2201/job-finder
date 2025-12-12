@@ -1,0 +1,56 @@
+5319613 done
+f28b4e3 fix channges
+b6d7ba0 Add gitignore
+406b9f7 removed one image
+1a2e588 readme file
+3f254f1 Merged Daljit CSS changes into Harpreet branch
+0de4f7c Merged Daljit changes into Harpreet branch
+3789233 Completed login and home page with Random User API
+71d94e1 fixed work
+0ea7715 On CSS
+79424c3 Merge branch 'harpreet' of https://github.com/harpreetkaur2201/job-finder into daljit
+6d463bb pic
+9358ce9 Changes in CSS
+1ecc825 Data
+33c0433 Work on JS
+e342827 changes in responsivness
+b208aed author name
+508ad19 Add features
+329f6e2 Readme
+7783044 Add images
+7e433e7 Changes
+ada14f5 Updated home.css and layout fixes
+c06d614 home.css and home.html
+500097c Updated home.html layout
+9d48730 home.html done
+b2d634a home.html
+222705f Resolved merge conflicts
+b11e836 Link file
+53e8c37 Updates home html
+51821bc Resolved leftover merge conflicts
+2f2ca97 Accepted all my changes
+40e7dfe Pick daljit file
+5dbd31d Add login.js again (clean version)
+3210a21 login.js
+4bde84d css
+14d658b updated css and stop scrolling
+7216ae8 Dialog box
+e8c7d60 Read me file
+71e80fb link files
+228fc2f i tried to follow example brickshare
+34d2705 added image for login page
+c77d054  i did chnges in css
+28b7aba assignmnt html
+c738e07 html
+8fb1fdd added responsiveness
+19ff656 adjusted the right column
+ac071bb css code for centre user info
+a184214 styled the left profile area
+38e6533 positioned the footer
+b310f5e Css for Main sections
+71351cd styled the Header section
+a53bc4c added css code for body and html
+7c32ada adjusted files and folders
+ff304de created a new branch
+bc43618 new file
+5743729 Start working on project
