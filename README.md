@@ -11,10 +11,10 @@ As ,The application uses the **Random User API** to fetch user data.
 
 - At least **10 users** are fetched
 - Displays:
-  - Profile picture
-  - Full name
-  - City
-- Data is retrieved using the **Fetch API**
+   Profile picture
+   Full name
+   City
+ Data is retrieved using the **Fetch API**
 
 
 
