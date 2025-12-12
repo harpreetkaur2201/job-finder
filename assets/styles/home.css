@@ -80,10 +80,10 @@ main.container {
 .center-column {
     margin-left: 360px;
     margin-right: 360px;
-
     display: flex;
     flex-direction: column;
     gap: 25px;
+    overflow-y: auto;
 }
 .right-column {
     position: fixed;
