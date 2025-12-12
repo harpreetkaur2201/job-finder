@@ -2,19 +2,18 @@
 @import "./reset.css";
 
 
+
 body {
     font-family: "Encode Sans", "Nunito Sans", "Roboto", sans-serif;
     background-color: #0c2b5b;
     margin: 0;
+    overflow-y: scroll;
 }
 
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 25px;
-    padding: 120px 40px 40px;
+* {
+    box-sizing: border-box; /* fix layout issue */
 }
+
 
 
 .header {
@@ -28,7 +27,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .logo {
@@ -53,13 +52,46 @@ body {
     text-decoration: underline;
 }
 
+
 .profile-icon img {
     width: 42px;
     height: 42px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid white;
+    transition: 0.3s;
+    cursor: pointer;
 }
+
+.profile-icon img:hover {
+    transform: scale(1.08);
+}
+
+
+
+.left-column {
+    position: fixed;
+    top: 100px;
+    left: 40px;
+    width: 300px;
+}
+
+.right-column {
+    position: fixed;
+    top: 100px;
+    right: 40px;
+    width: 300px;
+}
+
+.center-column {
+    margin-top: 100px;
+    margin-left: 360px;
+    margin-right: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 
 
 .card {
@@ -68,6 +100,7 @@ body {
     padding: 20px;
     box-shadow: 0px 4px 14px rgba(0,0,0,0.15);
 }
+
 
 
 .profile-card {
@@ -80,15 +113,20 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 12px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.profile-photo:hover {
+    transform: scale(1.08);
 }
 
 .user-name {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 4px;
 }
 
-.user-role, 
+.user-role,
 .user-location {
     font-size: 14px;
     color: #444;
@@ -112,21 +150,56 @@ body {
 
 .premium-btn {
     width: 80%;
-    margin: 10px auto 0;
     padding: 10px 14px;
-    background-color: #fff;
+    margin: 10px auto 0;
+    background-color: white;
     border: 1.5px solid #4f7cff;
     border-radius: 8px;
     color: #4f7cff;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .premium-btn:hover {
     background-color: #4f7cff;
     color: white;
 }
+
+
+
+.quick-links {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.10);
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    font-size: 14px;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.quick-links li:hover {
+    background: #f2f4f7;
+    border-radius: 8px;
+}
+
+.quick-links i {
+    color: #4f7cff;
+}
+
 
 
 .post-box textarea {
@@ -148,30 +221,31 @@ body {
 .post-options button {
     background: none;
     border: none;
-    font-size: 14px;
-    cursor: pointer;
     display: flex;
     gap: 6px;
     align-items: center;
+    cursor: pointer;
     color: #333;
+    font-size: 14px;
 }
 
 .post-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
     background-color: #4f7cff;
     color: white;
-    width: 100%;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 12px;
-    cursor: pointer;
     font-weight: 600;
-    transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .post-btn:hover {
     background-color: #3f66d8;
 }
+
+
 
 .post-info {
     display: flex;
@@ -184,11 +258,23 @@ body {
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.post-user:hover {
+    transform: scale(1.08);
 }
 
 .post-username {
     font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.post-username:hover {
+    color: #4f7cff;
 }
 
 .post-time {
@@ -213,19 +299,19 @@ body {
     gap: 20px;
     font-size: 14px;
     color: #444;
-    align-items: center;
 }
 
 .post-actions span {
+    cursor: pointer;
     display: flex;
     gap: 6px;
     align-items: center;
-    cursor: pointer;
 }
 
 .post-actions i {
     font-size: 16px;
 }
+
 
 
 .suggest-title {
@@ -241,52 +327,70 @@ body {
 }
 
 
+#suggestions img {
+    cursor: pointer;
+    transition: .3s;
+}
+
+#suggestions img:hover {
+    transform: scale(1.08);
+}
+
+
+
 .footer {
     text-align: center;
     color: white;
     font-size: 14px;
     padding: 18px 0;
+    margin-top: 60px;
     background-color: #0c2b5b;
-    margin-top: 40px;
 }
 
 
+
 @media (max-width: 992px) {
-
-    .header {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-        gap: 10px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .container {
-        grid-template-columns: 1fr;
-        padding: 140px 20px 30px;
-        gap: 20px;
-    }
-
-    .left-column,
-    .center-column,
     .right-column {
-        width: 100%;
+        display: none;
     }
 
-    .right-column {
-        display: none; /* hide suggestions like LinkedIn mobile */
+    .left-column {
+        width: 260px;
     }
 
-    textarea {
-        height: 70px;
+    .center-column {
+        margin-left: 280px;
+        margin-right: 20px;
     }
 
-    .post-image {
-        height: auto;
+    .card {
+        padding: 16px;
+    }
+
+    .post-text {
+        font-size: 14px;
+    }
+
+    .post-actions {
+        gap: 16px;
+        font-size: 13px;
+    }
+
+    .profile-card .user-name {
+        font-size: 18px;
+    }
+
+    .profile-card .user-role,
+    .profile-card .user-location {
+        font-size: 13px;
+    }
+
+    .premium-btn {
+        padding: 8px 12px;
+    }
+
+    .quick-links li {
+        font-size: 13px;
+        padding: 8px 4px;
     }
 }
