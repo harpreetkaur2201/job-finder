@@ -13,3 +13,16 @@ Professional front-end prototype for a job-networking application. This reposito
 - Post creation box
 - Posts feed with like, comment, and share counters
 - Suggestions panel
+
+## Technologies Used
+
+HTML5
+CSS3
+JavaScript
+Google Fonts
+Font Awesome Icons
+
+## Authors
+Harpreet Kaur
+Harman
+Daljit Kaur
