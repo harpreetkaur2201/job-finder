@@ -1,0 +1,299 @@
+@charset "UTF-8";
+@import "./reset.css";
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Encode Sans", "Nunito Sans", "Roboto", sans-serif;
+    background-color: #0c2b5b;
+    margin: 0;
+    overflow-y: auto;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    background-color: #93a1d4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+
+    z-index: 2000;
+}
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.profile-icon img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+
+
+main.container {
+    padding-top: 100px;   
+    padding-bottom: 90px; 
+}
+
+
+.left-column {
+    position: fixed;
+    top: 100px;
+    left: 40px;
+    width: 300px;
+}
+
+
+.right-column {
+    position: fixed;
+    top: 100px;
+    right: 40px;
+    width: 300px;
+}
+
+
+.center-column {
+    margin-left: 360px;
+    margin-right: 360px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.right-column {
+    position: fixed;
+    top: 100px;
+    right: 40px;
+    width: 300px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+
+.profile-card {
+    text-align: center;
+}
+.profile-photo {
+    display: block;
+    margin: 0 auto 12px auto; 
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.user-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+.user-role, .user-location {
+    font-size: 14px;
+    color: #444;
+}
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin: 18px 0;
+}
+.detail-number {
+    font-size: 18px;
+    font-weight: 700;
+}
+.detail-label {
+    font-size: 12px;
+    color: gray;
+}
+
+
+.premium-btn {
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #4f7cff;
+    border-radius: 8px;
+    color: #4f7cff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.premium-btn:hover {
+    background-color: #4f7cff;
+    color: white;
+}
+
+.premium-btn:active {
+    background-color: #3f66d8;
+    color: white;
+}
+
+
+
+.quick-links {
+    margin-top: 25px;
+}
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.quick-links li {
+    font-size: 14px;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+
+.post-box textarea {
+    width: 100%;
+    height: 85px;
+    border-radius: 12px;
+    border: 1.5px solid #ddd;
+    padding: 12px;
+    resize: none;
+}
+.post-options {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+.post-options button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.post-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    background-color: #4f7cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.post-btn:hover {
+    background-color: #3f66d8;
+}
+
+
+.post-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.post-user {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.post-username {
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.post-time {
+    font-size: 12px;
+    color: gray;
+}
+.post-text {
+    font-size: 14px;
+    color: #333;
+    margin: 12px 0;
+}
+.post-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+.right-column .card {
+    height: calc(100vh - 190px);
+    display: flex;
+    flex-direction: column;
+}
+
+.suggest-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+
+.people-scroll {
+    flex: 1;
+    overflow-y: auto;
+}
+#suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#suggestions img {
+    cursor: pointer;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    background-color: #93a1d4; /* SAME AS HEADER */
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    z-index: 1500;
+}
+
