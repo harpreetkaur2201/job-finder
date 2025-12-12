@@ -1,10 +1,6 @@
 @charset "UTF-8";
 @import "./reset.css";
 
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
 
 body {
     font-family: "Encode Sans", "Nunito Sans", "Roboto", sans-serif;
@@ -21,19 +17,14 @@ body {
     width: 100%;
     max-width: 1900px;
     background: #ffffff;
-    border-radius: 14px;
     box-shadow: 0px 8px 25px rgba(0,0,0,0.12);
-
     padding: 40px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-
     height: 100vh;        
 }
-
-
 
 .left-section {
     flex: 1;
@@ -42,10 +33,9 @@ body {
 }
 
 .login-image {
-    width: 100%;
-    height: 100%;
-    max-height: 500px;
-    object-fit: cover;
+    margin-top: 5px;
+    width: 800px;
+    height: 558px;
     border-radius: 12px;
 }
 
@@ -179,7 +169,7 @@ input:focus {
 .social-login {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .social-login a {

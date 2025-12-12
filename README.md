@@ -14,9 +14,9 @@ The application includes:
 - Data is retrieved using the **Fetch API**
 
 ## Team
-Harpreet Kaur
-Harman
-Daljit Kaur
+- Harpreet Kaur
+- Harman
+- Daljit Kaur
 ## Live Link : [Apply Now](https://harpreetkaur2201.github.io/job-finder/)
 
 

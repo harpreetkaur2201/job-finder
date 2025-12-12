@@ -18,7 +18,7 @@ function listen(event, element, callback) {
 
 function loadPeople() {
 
-    const URL = 'https://randomuser.me/api/?results=10&nat=CA';
+    const URL = 'https://randomuser.me/api/?results=14&nat=CA';
 
     const options = {
         method: 'GET',
@@ -51,18 +51,15 @@ function showPeople(list) {
 
         let user = list[i];
 
-        let photo = user.picture.medium;  // medium size user photo
-        let name = user.name.first + ' ' + user.name.last; // user full name
+        let photo = user.picture.medium;  
+        let name = user.name.first + ' ' + user.name.last; 
         let city = user.location.city;
 
         let div = document.createElement('div');
 
-        div.innerHTML =
-            "<img src='" + photo + "' alt='User photo'>" +
-            "<p>" + name + "</p>" +
-            "<p>" + city + "</p>";
+        div.innerHTML ="<img src='" + photo + "' alt='User photo'>" + "<p>" + name + ", " + city + "</p>";
 
-        box.appendChild(div);  // add user photo, name and city inside the div
+        box.appendChild(div); 
     }
 }
 
