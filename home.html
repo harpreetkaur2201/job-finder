@@ -8,140 +8,125 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Nunito+Sans:wght@200..1000&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/home.css" media="all">
     <script src="./assets/scripts/home.js" defer></script>
-    <title>Job Finder | Home</title>
+    <title>Job Finder | Home Page</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-left">
-            <h2 class="logo">JobFinder</h2>
-        </div>
-        <nav class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="#">Network</a>
-            <a href="#">Messaging</a>
-            <a href="#">Notifications</a>
-            <a href="#">Jobs</a>
-            <a href="#">Work</a>
-        </nav>
-        <div class="profile-icon">
-            <img src="./assets/media/profileimage.jpg" alt="Profile">
-        </div>
-    </header>
-    <main class="container"> 
-       <aside class="left-column">
-    <div class="card profile-card">
-        <img src="./assets/media/profileimage.jpg" class="profile-photo" alt="User Photo">
-        <h3 class="user-name">Harman Singh</h3>
-        <p class="user-role">Student • Developer</p>
-        <p class="user-location">Winnipeg, Manitoba</p>
-        <div class="details">
-            <div>
-                <p class="detail-number">200</p>
-                <p class="detail-label">Connections</p>
-            </div>
-            <div>
-                <p class="detail-number">60</p>
-                <p class="detail-label">Views</p>
-            </div>
-        </div>
 
-        <button class="premium-btn">Upgrade to Premium</button>
+
+<header class="header">
+    <div class="header-left">
+        <h2 class="logo">JobFinder</h2>
     </div>
 
+    <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="#">Network</a>
+        <a href="#">Messaging</a>
+        <a href="#">Notifications</a>
+        <a href="#">Jobs</a>
+        <a href="#">Work</a>
+    </nav>
+
+    <div class="profile-icon">
+        <img src="./assets/media/profileimage.jpg" alt="Profile">
+    </div>
+</header>
+
+
+<main class="container">
 
     
-    <div class="card quick-links">
-        <ul>
-            <li><i class="fa-regular fa-bookmark"></i> Saved items</li>
-            <li><i class="fa-solid fa-users"></i> Groups</li>
-            <li><i class="fa-regular fa-newspaper"></i> Newsletters</li>
-            <li><i class="fa-regular fa-calendar"></i> Events</li>
-        </ul>
-    </div>
+    <aside class="left-column">
 
-</aside>
+        <div class="card profile-card">
+            <img src="./assets/media/profileimage.jpg" class="profile-photo" alt="User Photo">
 
-        
-        <section class="center-column">
+            <h3 class="user-name">Harman Singh</h3>
+            <p class="user-role">Student - Developer</p>
+            <p class="user-location">Winnipeg, Manitoba</p>
+
+            <div class="details">
+                <div>
+                    <p class="detail-number">200</p>
+                    <p class="detail-label">Connections</p>
+                </div>
+                <div>
+                    <p class="detail-number">60</p>
+                    <p class="detail-label">Views</p>
+                </div>
+            </div>
+
+            <button class="premium-btn">Upgrade to Premium</button>
+        </div>
+
+        <div class="card quick-links">
+            <ul>
+                <li><i class="fa-regular fa-bookmark"></i> Saved items</li>
+                <li><i class="fa-solid fa-users"></i> Groups</li>
+                <li><i class="fa-regular fa-newspaper"></i> Newsletters</li>
+                <li><i class="fa-regular fa-calendar"></i> Events</li>
+            </ul>
+        </div>
+
+    </aside>
+
+    
+    <section class="center-column">
+
+        <div class="card post-box">
+            <textarea placeholder="Start a post."></textarea>
+
+            <div class="post-options">
+                <button><i class="fa-regular fa-newspaper"></i> Article</button>
+                <button><i class="fa-regular fa-image"></i> Image</button>
+                <button><i class="fa-solid fa-video"></i> Video</button>
+            </div>
+
+            <button class="post-btn">Post</button>
+        </div>
+
+        <div class="card post">
+            <div class="post-info">
+                <img src="./assets/media/profileimage.jpg" class="post-user" alt="User">
+                <div>
+                    <p class="post-username">Harman</p>
+                    <p class="post-time">15m ago</p>
+                </div>
+            </div>
+
+            <p class="post-text">
+               If you're nothing without this suit, then you shouldn't have it.
+            </p>
+
+            <img src="./assets/media/marvel.png" class="post-image" alt="Marvel">
+        </div>
+
+    </section>
+
+    
+    <aside class="right-column">
+
+        <div class="card">
+            <h3 class="suggest-title">People You May Know</h3>
 
             
-            <div class="card post-box">
-                <textarea placeholder="Start a post."></textarea>
+            <div id="suggestions" class="people-scroll"></div>
+        </div>
 
-                <div class="post-options">
-                    <button><i class="fa-regular fa-newspaper"></i> Article</button>
-                    <button><i class="fa-regular fa-image"></i> Image</button>
-                    <button><i class="fa-solid fa-video"></i> Video</button>
-                </div>
+    </aside>
 
-                <button class="post-btn">Post</button>
-            </div>
+</main>
 
-           
-            <div class="card post">
-                <div class="post-info">
-                    <img src="./assets/media/profileimage.jpg" class="post-user" alt="User">
-                    <div>
-                        <p class="post-username">Harman</p>
-                        <p class="post-time">12m ago</p>
-                    </div>
-                </div>
 
-                <p class="post-text">
-                    Hello everyone! I am a full-time student at MITT.
-                </p>
-
-                <img src="./assets/media/MITTPIC.jpg" class="post-image" alt="MITT Campus">
-
-                <div class="post-actions">
-                    <span id="likeBtn1"><i class="fa-regular fa-heart"></i><span id="likeCount1">15</span></span>
-                    <span id="commentBtn1"><i class="fa-regular fa-comment"></i><span id="commentCount1">12</span></span>
-                    <span id="shareBtn1"><i class="fa-solid fa-share"></i> Share</span>
-                </div>
-            </div>
-
-           
-            <div class="card post">
-                <div class="post-info">
-                    <img src="./assets/media/profileimage.jpg" class="post-user" alt="User">
-                    <div>
-                        <p class="post-username">Harman</p>
-                        <p class="post-time">1h ago</p>
-                    </div>
-                </div>
-
-                <p class="post-text">
-                    Excited to continue learning web development! Every day brings a new challenge and a new opportunity.
-                </p>
-
-                <div class="post-actions">
-                    <span id="likeBtn2"><i class="fa-regular fa-heart"></i><span id="likeCount2">8</span></span>
-                    <span id="commentBtn2"><i class="fa-regular fa-comment"></i><span id="commentCount2">3</span></span>
-                    <span id="shareBtn2"><i class="fa-solid fa-share"></i> Share</span>
-                </div>
-            </div>
-
-        </section>
-
-        
-        <aside class="right-column">
-            <div class="card">
-                <h3 class="suggest-title">People You May Know</h3>
-                <div id="suggestions"></div>
-            </div>
-        </aside>
-
-    </main>
-
-   
-    <footer class="footer">
-        &copy; 2025 JobFinder. All rights reserved.
-    </footer>
+<footer class="footer">
+    &copy; 2025 JobFinder. All rights reserved.
+</footer>
 
 </body>
 </html>

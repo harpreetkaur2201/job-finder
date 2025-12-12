@@ -1,160 +1,96 @@
-"use strict";
+'use strict';
 
 
-/* -----------------------------
-   Helper functions (same as notes)
-------------------------------*/
+
 function getElement(id) {
     return document.getElementById(id);
 }
 
-
 function select(selector) {
     return document.querySelector(selector);
 }
-
 
 function listen(event, element, callback) {
     element.addEventListener(event, callback);
 }
 
 
-/* -----------------------------
-   FETCH USERS (teacher's .then() style)
-------------------------------*/
 
+function loadPeople() {
 
-function loadUsers() {
-
-
-    const URL = "https://randomuser.me/api/?results=10&nat=CA";
-
+    const URL = 'https://randomuser.me/api/?results=10&nat=CA';
 
     const options = {
-        method: "GET",
+        method: 'GET',
         headers: {
-            "Content-Type": "application/JSON; charset=UTF-8"
+            'Content-Type': 'application/JSON; charset=UTF-8'
         },
-        mode: "cors"
+        mode: 'cors'
     };
 
-
     fetch(URL, options)
-        .then(function(response) {
+        .then(function (response) {
             return response.json();
         })
-        .then(function(data) {
-            showUsers(data.results);
+        .then(function (data) {
+            showPeople(data.results);
         })
-        .catch(function(error) {
-            console.log("Error:", error);
+        .catch(function (error) {
+            console.log('Fetch error:', error);
         });
 }
 
 
-/* -----------------------------
-   DISPLAY USERS (beginner friendly)
-------------------------------*/
 
+function showPeople(list) {
 
-function showUsers(list) {
-
-
-    let box = getElement("suggestions");
-    box.innerHTML = ""; // clear old items
-
+    let box = getElement('suggestions');
+    box.innerHTML = '';
 
     for (let i = 0; i < list.length; i++) {
 
-
         let user = list[i];
 
-
-        let pic = user.picture.medium;
-        let fullName = user.name.first + " " + user.name.last;
+        let photo = user.picture.medium;  // medium size user photo
+        let name = user.name.first + ' ' + user.name.last; // user full name
         let city = user.location.city;
 
-
-        let div = document.createElement("div");
-        div.className = "suggest-card";
-
+        let div = document.createElement('div');
 
         div.innerHTML =
-            "<img class='suggest-photo' src='" + pic + "'>" +
-            "<p class='suggest-name'>" + fullName + "</p>" +
-            "<p class='suggest-city'>" + city + "</p>";
+            "<img src='" + photo + "' alt='User photo'>" +
+            "<p>" + name + "</p>" +
+            "<p>" + city + "</p>";
 
-
-        box.appendChild(div);
+        box.appendChild(div);  // add user photo, name and city inside the div
     }
 }
 
 
-/* -----------------------------
-   LIKE BUTTONS (same style as yours)
-------------------------------*/
 
+function setupPost() {
 
-function setupLikes() {
+    let postBtn = select('.post-btn');
+    let textarea = select('.post-box textarea');
 
+    listen('click', postBtn, function () {
 
-    let like1 = getElement("likeBtn1");
-    let count1 = getElement("likeCount1");
+        let text = textarea.value.trim();
 
+        if (text === '') {
+            console.log('Post is empty');
+            return;
+        }
 
-    listen("click", like1, function() {
-        let num = Number(count1.innerText);
-        count1.innerText = num + 1;
-    });
+        console.log('Post submitted:', text);
 
-
-    let like2 = getElement("likeBtn2");
-    let count2 = getElement("likeCount2");
-
-
-    listen("click", like2, function() {
-        let num = Number(count2.innerText);
-        count2.innerText = num + 1;
+        textarea.value = ''; 
     });
 }
 
 
-/* -----------------------------
-   COMMENT BUTTON FIX
-------------------------------*/
 
-
-function setupComments() {
-
-
-    let c1 = getElement("commentBtn1");
-    let count1 = getElement("commentCount1");
-
-
-    listen("click", c1, function () {
-        let num = Number(count1.innerText);
-        count1.innerText = num + 1;
-    });
-
-
-    let c2 = getElement("commentBtn2");
-    let count2 = getElement("commentCount2");
-
-
-    listen("click", c2, function () {
-        let num = Number(count2.innerText);
-        count2.innerText = num + 1;
-    });
-}
-
-
-/* -----------------------------
-   PAGE LOAD
-------------------------------*/
-
-
-window.onload = function() {
-    loadUsers();     // fetch "people you may know"
-    setupLikes();    // like buttons
-    setupComments(); // comment buttons now working
+window.onload = function () {
+    loadPeople();
+    setupPost();
 };
