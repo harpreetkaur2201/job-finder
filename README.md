@@ -12,8 +12,20 @@ The application includes:
 - Displays:
   Profile picture,Full name,City
 - Data is retrieved using the **Fetch API**
+
 ## Team
 Harpreet Kaur
 Harman
 Daljit Kaur
-## Live Link :
+## Live Link : [Apply Now](https://harpreetkaur2201.github.io/job-finder/)
+
+
+
+
+
+
+
+
+
+
+
