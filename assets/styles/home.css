@@ -3,15 +3,15 @@
 
 
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Encode Sans", "Nunito Sans", "Roboto", sans-serif;
     background-color: #0c2b5b;
     margin: 0;
-    overflow-y: scroll;
-}
-
-* {
-    box-sizing: border-box; /* fix layout issue */
+    overflow-y: auto;
 }
 
 
@@ -22,11 +22,14 @@ body {
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: #4f7cff;
+
+    background-color: #93a1d4;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
+
     z-index: 2000;
 }
 
@@ -52,21 +55,21 @@ body {
     text-decoration: underline;
 }
 
-
 .profile-icon img {
     width: 42px;
     height: 42px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid white;
-    transition: 0.3s;
     cursor: pointer;
 }
 
-.profile-icon img:hover {
-    transform: scale(1.08);
-}
 
+
+main.container {
+    padding-top: 100px;   
+    padding-bottom: 90px; 
+}
 
 
 .left-column {
@@ -76,6 +79,7 @@ body {
     width: 300px;
 }
 
+
 .right-column {
     position: fixed;
     top: 100px;
@@ -83,10 +87,11 @@ body {
     width: 300px;
 }
 
+
 .center-column {
-    margin-top: 100px;
     margin-left: 360px;
     margin-right: 360px;
+
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -98,7 +103,7 @@ body {
     background-color: white;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0px 4px 14px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 
 
@@ -108,17 +113,13 @@ body {
 }
 
 .profile-photo {
+    display: block;
+    margin: 0 auto 12px auto; 
     width: 90px;
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 12px;
-    transition: .3s;
     cursor: pointer;
-}
-
-.profile-photo:hover {
-    transform: scale(1.08);
 }
 
 .user-name {
@@ -148,17 +149,16 @@ body {
     color: gray;
 }
 
+
 .premium-btn {
     width: 80%;
-    padding: 10px 14px;
-    margin: 10px auto 0;
+    padding: 10px;
     background-color: white;
-    border: 1.5px solid #4f7cff;
+    border: 2px solid #4f7cff;
     border-radius: 8px;
     color: #4f7cff;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .premium-btn:hover {
@@ -166,14 +166,15 @@ body {
     color: white;
 }
 
+.premium-btn:active {
+    background-color: #3f66d8;
+    color: white;
+}
+
 
 
 .quick-links {
     margin-top: 25px;
-    padding: 15px;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0px 4px 14px rgba(0,0,0,0.10);
 }
 
 .quick-links ul {
@@ -191,15 +192,6 @@ body {
     cursor: pointer;
 }
 
-.quick-links li:hover {
-    background: #f2f4f7;
-    border-radius: 8px;
-}
-
-.quick-links i {
-    color: #4f7cff;
-}
-
 
 
 .post-box textarea {
@@ -209,7 +201,6 @@ body {
     border: 1px solid #ddd;
     padding: 12px;
     resize: none;
-    font-size: 14px;
 }
 
 .post-options {
@@ -221,23 +212,18 @@ body {
 .post-options button {
     background: none;
     border: none;
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    cursor: pointer;
-    color: #333;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .post-btn {
     width: 100%;
-    padding: 10px;
     margin-top: 12px;
-    border: none;
-    border-radius: 8px;
+    padding: 10px;
     background-color: #4f7cff;
     color: white;
-    font-weight: 600;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -258,23 +244,13 @@ body {
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
-    transition: .3s;
     cursor: pointer;
-}
-
-.post-user:hover {
-    transform: scale(1.08);
 }
 
 .post-username {
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: .2s;
-}
-
-.post-username:hover {
-    color: #4f7cff;
 }
 
 .post-time {
@@ -290,34 +266,26 @@ body {
 .post-image {
     width: 100%;
     border-radius: 10px;
-    margin-top: 10px;
 }
 
-.post-actions {
-    margin-top: 14px;
+
+
+.right-column .card {
+    height: calc(100vh - 190px);
     display: flex;
-    gap: 20px;
-    font-size: 14px;
-    color: #444;
+    flex-direction: column;
 }
-
-.post-actions span {
-    cursor: pointer;
-    display: flex;
-    gap: 6px;
-    align-items: center;
-}
-
-.post-actions i {
-    font-size: 16px;
-}
-
-
 
 .suggest-title {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+}
+
+
+.people-scroll {
+    flex: 1;
+    overflow-y: auto;
 }
 
 #suggestions {
@@ -326,71 +294,28 @@ body {
     gap: 12px;
 }
 
-
 #suggestions img {
     cursor: pointer;
-    transition: .3s;
-}
-
-#suggestions img:hover {
-    transform: scale(1.08);
 }
 
 
 
 .footer {
-    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    background-color: #93a1d4; /* SAME AS HEADER */
     color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     font-size: 14px;
-    padding: 18px 0;
-    margin-top: 60px;
-    background-color: #0c2b5b;
+    z-index: 1500;
 }
 
 
-
-@media (max-width: 992px) {
-    .right-column {
-        display: none;
-    }
-
-    .left-column {
-        width: 260px;
-    }
-
-    .center-column {
-        margin-left: 280px;
-        margin-right: 20px;
-    }
-
-    .card {
-        padding: 16px;
-    }
-
-    .post-text {
-        font-size: 14px;
-    }
-
-    .post-actions {
-        gap: 16px;
-        font-size: 13px;
-    }
-
-    .profile-card .user-name {
-        font-size: 18px;
-    }
-
-    .profile-card .user-role,
-    .profile-card .user-location {
-        font-size: 13px;
-    }
-
-    .premium-btn {
-        padding: 8px 12px;
-    }
-
-    .quick-links li {
-        font-size: 13px;
-        padding: 8px 4px;
-    }
-}
