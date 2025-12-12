@@ -14,7 +14,7 @@ body {
     overflow-y: auto;
 }
 
-/* Header */
+
 .header {
     position: fixed;
     top: 0;
@@ -97,7 +97,6 @@ main.container {
     width: 300px;
 }
 
-/* Card common style */
 .card {
     background-color: white;
     border-radius: 12px;
@@ -105,7 +104,7 @@ main.container {
     box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 
-/* Left Column - Profile Card */
+
 .profile-card {
     text-align: center;
 }
@@ -216,7 +215,7 @@ main.container {
     background-color: #3f66d8;
 }
 
-/* Center Column - Post Card */
+
 .post-info {
     display: flex;
     gap: 12px;
@@ -279,7 +278,7 @@ main.container {
     cursor: pointer;
 }
 
-/* Footer */
+
 .footer {
     position: fixed;
     bottom: 0;
