@@ -14,11 +14,11 @@ As ,The application uses the **Random User API** to fetch user data.
    Profile picture,
    Full name,
    City,
- Data is retrieved using the **Fetch API**
+     Data is retrieved using the **Fetch API**
 
 
 
-## Team
+## Team Members
 Harpreet Kaur
 Harman
 Daljit Kaur
