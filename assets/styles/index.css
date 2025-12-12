@@ -207,7 +207,7 @@ input:focus {
 
 
 
-@media (max-width: 992px) {
+@media (max-width: 932px) {
     .login-container {
         flex-direction: column;
         height: auto;
@@ -223,10 +223,6 @@ input:focus {
     .right-section {
         width: 100%;
         height: auto;
-    }
-
-    .login-image {
-        height: 300px;
     }
 }
 
