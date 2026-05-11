@@ -20,7 +20,7 @@ The application includes:
 
 ## 🚀Live Link : [Apply Now](https://harpreetkaur2201.github.io/job-finder/)
 
-##📸 Project Screenshot
+## 📸 Project Screenshot
 A simple and modern login interface designed to simulate a professional job platform entry point.
 
 <img width="1838" height="875" alt="Screenshot 2026-05-11 131601" src="https://github.com/user-attachments/assets/1deaa640-7a58-4987-8964-8b64f4d02003" />
