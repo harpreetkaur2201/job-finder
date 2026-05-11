@@ -10,7 +10,7 @@ The application includes:
 - A **home page** with a **3-column layout**
 - Random users displayed using the **Random User API**
 
-##👤 Random User API 
+## 👤 Random User API 
 - At least **10 users** are fetched
 - Displays:
   - Profile picture
