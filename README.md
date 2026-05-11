@@ -18,7 +18,7 @@ The application includes:
   - City
 - Data is retrieved using the **Fetch API**
 
-## Live Link : [Apply Now](https://harpreetkaur2201.github.io/job-finder/)
+Live Link : [Apply Now](https://harpreetkaur2201.github.io/job-finder/)
 
 ## Project Screenshots
 A simple and modern login interface designed to simulate a professional job platform entry point.
